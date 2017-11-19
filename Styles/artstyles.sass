@@ -1,0 +1,274 @@
+//Variables
+
+$aqua1:   #b7dbd1
+$gray1:   #cedbd7
+$forest1: #becec9
+$forest2: #8b9c97
+$red1:    #e7cac1
+$brown1:  #cec1be
+$brown3:  #6b5853
+$brown5:  #241d1c
+
+$font-stack: 'Montserrat'
+$font-size: 14px
+
+//Mixins
+
+=backgroundimage ($name, $backgroundsize, $position)
+  $url: "../Images/#{$name}"
+  background-image: url($url)
+  background-size: $backgroundsize
+  background-position: $position
+
+
+
+//Styles
+
+body
+  background-color: white
+  font-family: $font-stack
+
+#header
+  text-align: center
+  font-weight: 200
+  font-size: 20px
+  margin: 20px 0px 0px 0px
+  position: flex
+  align-items: center
+  justify-content: center
+  a
+    margin: 0px 90px
+    color: $forest2
+    text-decoration: none
+    text-align: center
+    transition-duration: 0.3s
+  a:hover
+    color: $forest1
+    transition-duration: 0.3s
+
+.homelink
+  display: flex
+  text-transform: uppercase
+  font-size: 30pt
+  letter-spacing: 0.2em
+  text-align: center
+  align-items: center
+  justify-content: center
+  margin: 10px 0 25px 0
+  font-weight: 500
+  color: $forest2
+  text-decoration: none
+  transition-duration: 0.3s
+  padding-left: 5px
+  a:hover
+    color: $forest1
+    transition-duration: 0.3s
+
+//Music Styles
+
+.container2
+  display: grid
+  grid-template-columns: 1fr
+  grid-auto-rows: 50vh
+  margin: 0 0
+  grid-gap: 0px
+
+.mix1
+  display: grid
+  grid-template-columns: 1fr 1fr
+  padding: 0 20vw
+  background-color: $red1
+
+
+.mix2
+  display: grid
+  grid-template-columns: 1fr 1fr
+  padding: 0 20vw
+  background-color: $forest1
+
+.mix3
+  display: grid
+  grid-template-columns: 1fr 1fr
+  padding: 0 20vw
+  background-color: $forest2
+
+.mix4
+  display: grid
+  grid-template-columns: 1fr 1fr
+  padding: 0 20vw
+  background-color: $brown3
+
+.vibes
+  display: grid
+  color: $brown5
+  padding: 17vh 0
+  grid-template-rows: auto
+  p
+    font-size: 20px
+    padding: 0
+    margin: 0
+    padding-left: 10vw
+    font-weight: 200
+
+
+
+
+//Art Styles
+
+.container
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-auto-rows: 30vh
+  margin: 0 20vw
+  grid-gap: 10px
+
+.box1
+  +backgroundimage ('CircuitCityFinal.jpg', cover, center)
+  grid-column: 1/3
+
+.box2
+  +backgroundimage ('RaptorMarble.jpg', cover, center)
+  grid-row: 2/4
+
+.box3
+  +backgroundimage ('BrassiveUpload1.png', cover, center)
+
+.box4
+  +backgroundimage ('SpringMix3.jpg', contain, center)
+
+.box5
+  +backgroundimage ('Jungle_cat2.jpg', cover, center)
+
+.box6
+  +backgroundimage ('CarPrint1.jpg', cover, 90% 50%)
+  grid-column: 2/4
+
+.box7
+  +backgroundimage ('RiverBlur2.jpg', cover, 70% 50%)
+  grid-row: 4/6
+  grid-column: 2/3
+
+.box8
+  +backgroundimage ('JapaneseIsland2.jpg', cover, center)
+
+.box9
+  +backgroundimage ('Bridge_2.jpg', cover, center)
+
+.box10
+  +backgroundimage ('HarveyPrint1.jpg', cover, center)
+
+.box11
+  +backgroundimage ('BeatsNTreats_cover.jpg', contain, center)
+
+.box12
+  +backgroundimage ('HelpPrint1.jpg', cover, center)
+  grid-column: 1/3
+
+.box13
+  +backgroundimage ('studyabroad1.jpg', cover, 25% 50%)
+
+.box14
+  +backgroundimage ('OrangeFungus.2.jpg', cover, 50% 30%)
+  grid-column: 1/4
+
+.box15
+  +backgroundimage ('DiscoFunk_white.jpg', contain, center)
+
+.box16
+  +backgroundimage ('FlowerCollage1.jpg', cover, center)
+  grid-column: 2/4
+
+//Resume Styles
+
+.pdf
+  display: flex
+  align-items: center
+  justify-content: center
+
+  embed
+    height: 80vh
+    width: 70%
+
+
+
+
+@media (max-width:960px)
+
+  .container
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: 30vh
+
+  .box1
+    grid-column: 1/2
+
+  .box2
+    grid-row: 2/3
+
+  .box5
+    grid-row: 3/4
+
+  .box6
+    grid-row: 4/5
+    grid-column: 1/2
+
+  .box4
+    grid-row: 5/6
+    background-size: cover
+    +backgroundimage ('CircleVectorCollage.jpg', cover, center)
+    border: solid 1px $aqua1
+
+  .box9
+    grid-row: 6/7
+
+  .box3
+    grid-row: 7/8
+    background-size: cover
+
+  .box8
+    grid-row: 8/9
+
+  .box7
+    grid-row: 9/10
+    grid-column: 1/2
+
+  .box10
+    grid-row: 10/11
+    grid-column: 1/2
+
+  .box12
+    grid-row: 11/12
+    grid-column: 1/2
+
+  .box13
+    grid-row: 12/13
+
+  .box16
+    grid-row: 13/14
+    grid-column: 1/2
+
+  .box14
+    grid-row: 14/15
+    grid-column: 1/2
+
+  .box11
+    visibility: collapse
+    grid-row: 15/16
+    grid-column: 1/2
+
+  .box15
+    visibility: collapse
+
+  .mix1
+    padding: 0
+
+  .mix2
+    padding: 0
+
+  .mix3
+    padding: 0
+  .mix4
+    padding: 0
+
+  .vibes
+    p
+      padding-left: 20vw

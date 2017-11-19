@@ -1,0 +1,205 @@
+// SASS
+
+// VARIABLES
+
+$aqua1:   #b7dbd1
+$gray1:   #cedbd7
+$forest1: #becec9
+$forest2: #8b9c97
+$red1:    #e7cac1
+$brown1:  #cec1be
+$brown3:  #6b5853
+$brown5:  #241d1c
+
+$font-stack: 'Montserrat'
+$font-size: 14px
+
+
+
+
+
+// MIXINS
+
+
+
+
+// STYLES
+
+
+
+body
+  background: white
+  color: black
+  font-family: $font-stack
+  font-size: $font-size
+
+.banner
+  background-image: url('../Images/WelcomeBanner_1.jpg')
+  background-position: bottom
+  height: 60vh
+  background-attachment: fixed
+  display: flex
+  align-items: center
+  justify-content: center
+  h1
+    background: white
+    padding: 75px 175px
+    margin: 0
+    font-weight: 200
+
+#header
+  text-align: center
+  font-weight: 200
+  font-size: 20px
+  margin: 20px 0px 0px 0px
+  position: flex
+  align-items: center
+  justify-content: center
+  a
+    margin: 0px 90px
+    color: $forest2
+    text-decoration: none
+    text-align: center
+    transition-duration: 0.3s
+  a:hover
+    color: $forest1
+    transition-duration: 0.3s
+
+.nested
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 60vh
+
+.homelink
+  display: flex
+  text-transform: uppercase
+  font-size: 30pt
+  letter-spacing: 0.2em
+  text-align: center
+  align-items: center
+  justify-content: center
+  margin: 10px 0 25px 0
+  font-weight: 500
+  color: $forest2
+  text-decoration: none
+  transition-duration: 0.3s
+  padding-left: 5px
+  a:hover
+    color: $forest1
+    transition-duration: 0.3s
+
+
+
+.image1
+  background: $forest2
+  display: grid
+  align-items: center
+  justify-items: center
+  img
+    display: grid
+    width: 45vh
+    height: auto
+    align-items: center
+
+.content
+  background: $brown3
+  color: $forest2
+  text-align: left
+  padding: 100px 100px
+  align-items: center
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+  h2
+    color: $aqua1
+    font-size: 35px
+    letter-spacing: 0.2
+    font-weight: 500
+  a
+    display: inline
+    color: $gray1
+    font-size: 20px
+    text-align: left
+    padding: 0px
+    margin: 0px
+    transition-duration: 0.3s
+  a:hover
+    color: $forest2
+    transition-duration: 0.3s
+
+  p
+    color: white
+    font-weight: 100
+    font-size: 16px
+    margin: 30px 0px
+
+.space1
+  grid-row: 4/5
+  height: 300px
+
+.contact
+  display: grid
+  text-align: center
+  grid-template-rows: 200px
+  align-items: end
+  h1
+    font-weight: 500
+    text-transform: uppercase
+    font-size: 40px
+    letter-spacing: 0.2em
+    color: $forest2
+
+.footer
+  display: grid
+  grid-template-columns: 1fr 1fr
+  justify-items: center
+  align-items: center
+  background: $brown5
+  color: $aqua1
+  font-weight: 100
+
+
+
+.contactform
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 300px
+  justify-items: center
+  align-items: start
+  padding-top: 50px
+
+
+@media (max-width:960px)
+  .nested
+    grid-template-columns: 1fr
+    grid-template-rows: 50vh
+
+  .content
+    grid-row: 1/2
+    align-items: center
+    text-align: center
+
+  .image1
+    img
+      padding: 30px
+      width: 70%
+      height: auto
+
+  #header
+
+  .space1
+    height: 0px
+
+  .banner
+    h1
+      padding: 50px 100px
+
+  .contactform
+    img
+      width: 80%
+      height: auto
+
+  .footer
+    grid-template-rows: 100px
+    grid-template-columns: 1fr 1fr
